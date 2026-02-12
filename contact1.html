@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(rgb(39, 1, 28),rgb(7, 0, 32));
+            color: #f4eefb;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    #contact-alt {
+  padding: 70px 10%;
+}
+
+.contact-tagline {
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* LEFT SIDE */
+.contact-left {
+  flex: 1;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-left: 4px solid var(--accent);
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+.info-box span {
+  font-size: 26px;
+}
+
+.info-box h4 {
+  margin: 0;
+}
+
+/* RIGHT SIDE */
+.contact-right {
+  flex: 1;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #0f172a;
+  color: white;
+}
+
+body.light .field input,
+body.light .field textarea {
+  background: #e5e7eb;
+  color: #111;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.field textarea + label {
+  top: 20px;
+  transform: none;
+}
+
+.field input:focus + label,
+.field input:valid + label,
+.field textarea:focus + label,
+.field textarea:valid + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* BUTTON */
+.send-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #00e6e6, #ffd700);
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact-msg {
+  display: block;
+  margin-top: 15px;
+  color: var(--accent);
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:linear-gradient(45deg,#021a3a,#000);
+}
+
+.nav-links a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:18px;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00ffff;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.hero{
+    height:60vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#00ffff;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.8;
+}
+
+</style>
+<script>
+    
+  function handleContact(e) {
+    e.preventDefault();
+    document.getElementById("contact-msg").innerText =
+      "✨ Thanks for reaching out! I’ll get back to you soon.";
+  }
+</script>
+<body>
+<nav class="navbar">
+    <div class="logo">SPB</div>
+    <div class="nav-links">
+        <a href="home1.html">Home</a>
+        <a href="skills1.html">Skills</a>
+        <a href="project1.html">Projects</a>
+        <a href="contact1.html">Contact</a>
+    </div>
+</nav>
+
+    <section id="contact-alt">
+  <h2>Let’s Connect</h2>
+  <p class="contact-tagline">
+    I’m always open to discussing ideas, projects, or opportunities.
+  </p>
+
+  <div class="contact-wrapper">
+
+    <!-- Left Side -->
+    <div class="contact-left">
+      <div class="info-box">
+        <span>📧</span>
+        <div>
+          <h4>Email</h4>
+          <p>subhashree@example.com</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <span>📍</span>
+        <div>
+          <h4>Location</h4>
+          <p>India</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <span>🚀</span>
+        <div>
+          <h4>Status</h4>
+          <p>Open to Internships & Projects</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <form class="contact-right" onsubmit="handleContact(event)">
+      <div class="field">
+        <input type="text" required>
+        <label>Your Name</label>
+      </div>
+
+      <div class="field">
+        <input type="email" required>
+        <label>Your Email</label>
+      </div>
+
+      <div class="field">
+        <textarea required></textarea>
+        <label>Your Message</label>
+      </div>
+
+      <button type="submit" class="send-btn">Send Message</button>
+      <span id="contact-msg"></span>
+    </form>
+
+  </div>
+</section>
+</body>
+</html>
