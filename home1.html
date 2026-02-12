@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    overflow:hidden;
+    background: radial-gradient(ellipse at bottom,#0d1b2a 0%,#000814 100%);
+}
+
+/* ⭐ Stars Layer */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:transparent;
+}
+
+.stars::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    box-shadow:
+    100px 200px white, 300px 400px white, 500px 100px white,
+    700px 300px white, 900px 500px white, 1200px 200px white,
+    150px 600px white, 450px 700px white, 800px 650px white,
+    1100px 350px white, 1300px 550px white;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:0.3;}
+    to{opacity:1;}
+}
+
+/* 🌠 Shooting Star */
+.shooting-star{
+    position:absolute;
+    top:20%;
+    left:-100px;
+    width:150px;
+    height:2px;
+    background:linear-gradient(-45deg,white,transparent);
+    animation: shoot 5s infinite ease-in-out;
+}
+
+@keyframes shoot{
+    0%{transform:translateX(0) translateY(0);}
+    100%{transform:translateX(1500px) translateY(300px);}
+}
+
+/* 🌌 Hero Section */
+.hero{
+    position:relative;
+    width:90%;
+    max-width:1100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    box-shadow:0 0 60px rgba(0,0,0,0.8);
+    z-index:1;
+}
+
+/* Text Section */
+.hero-text{
+    max-width:600px;
+}
+
+.brand h1{
+    font-size:28px;
+    letter-spacing:3px;
+    color:#00f5ff;
+    margin-bottom:20px;
+}
+
+.hero-text h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:20px;
+    margin-bottom:25px;
+    color:#9bf6ff;
+}
+
+/* Buttons */
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.primary{
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    color:white;
+}
+
+.secondary{
+    background:transparent;
+    border:2px solid #00f5ff;
+    color:#00f5ff;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 20px #00f5ff;
+}
+
+/* Profile Image */
+.img img{
+    width:280px;
+    border-radius:50%;
+    border:4px solid rgba(255,255,255,0.3);
+    box-shadow:0 0 40px #00f5ff;
+    transition:0.4s;
+}
+
+.img img:hover{
+    transform:scale(1.1) rotate(3deg);
+    box-shadow:0 0 80px #00f5ff;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .img{
+        margin-top:30px;
+    }
+}
+/* .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:linear-gradient(45deg,#021a3a,#000);
+}
+
+.nav-links a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:18px;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00ffff;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.hero{
+    height:60vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#00ffff;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.8;
+} */
+
+</style>
+</head>
+
+<body>
+<!-- <nav class="navbar">
+    <div class="logo">SPB</div>
+    <div class="nav-links">
+        <a href="home1.html">Home</a>
+        <a href="skills1.html">Skills</a>
+        <a href="project1.html">Projects</a>
+        <a href="contact1.html">Contact</a>
+    </div>
+</nav> -->
+<div class="stars"></div>
+<div class="shooting-star"></div>
+
+<header class="hero">
+
+    <div class="hero-text">
+        <div class="brand">
+            <h1>SPB</h1>
+        </div>
+
+        <h2>Subhashree Priyadarshini Behera</h2>
+        <p>Full-Stack Developer | AI Enthusiast</p>
+
+        <div class="buttons">
+            <button class="btn primary" onclick="location.href='skills1.html'">View Skills</button>
+                    <button class="btn secondary" onclick="location.href='contact1.html'">Contact Me</button>
+
+        </div>
+    </div>
+
+    <div class="img">
+        <img src="WhatsApp_Image_2025-10-28_at_12.22.10_71c1f7fa-removebg-preview.png"
+        alt="Subhashree Profile">
+    </div>
+
+</header>
+
+</body>
+</html>
