@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subhashree Priyadarshini | Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Subhashree Priyadarshini, Software Engineer skilled in Web Development, AI and IoT projects.">
+  <meta name="keywords" content="Subhashree Priyadarshini, Portfolio, Software Engineer, Web Developer, AI, IoT">
+  <meta name="author" content="Subhashree Priyadarshini">
+
+  <!-- Google Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Subhashree Priyadarshini",
+    "jobTitle": "Software Engineer",
+    "sameAs": [
+      "https://github.com/yourusername",
+      "https://linkedin.com/in/yourprofile"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #e5e7eb;
+      --card: #1e293b;
+      --accent: #00e6e6;
+    }
+
+    body.light {
+      --bg: #ffffff;
+      --text: #111827;
+      --card: #f3f4f6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 60px 10%;
+      animation: fadeUp 1s ease;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent);
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    /* Theme Button */
+    #themeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 50%;
+      border: none;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    /* Stats */
+    #stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .stat {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* Skills */
+    .bar {
+      background: #333;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .bar span {
+      display: block;
+      height: 10px;
+      background: linear-gradient(90deg, #00e6e6, #ffd700);
+      border-radius: 10px;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* Badge */
+    .badge {
+      background: linear-gradient(90deg, #00e6e6, #ffd700);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .btn {
+      padding: 12px 25px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:linear-gradient(45deg,#021a3a,#000);
+}
+
+.nav-links a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:18px;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00ffff;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.hero{
+    height:60vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#00ffff;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.8;
+}
+  </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">SPB</div>
+    <div class="nav-links">
+        <a href="home1.html">Home</a>
+        <a href="skills1.html">Skills</a>
+        <a href="project1.html">Projects</a>
+        <a href="contact1.html">Contact</a>
+    </div>
+</nav>
+<button id="themeToggle">🌙</button>
+
+<!-- HERO -->
+<section>
+  <h1>Subhashree Priyadarshini</h1>
+  <h3>Software Engineer | Web Developer | AI & IoT Enthusiast</h3>
+  <p>I build intelligent, user-friendly, and real-world applications.</p>
+  <div class="badge">🚀 Open to Internships & Projects</div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stat">5+<span>Projects</span></div>
+  <div class="stat">10+<span>Technologies</span></div>
+  <div class="stat">100%<span>Learning Mindset</span></div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    I am a B.Tech student and aspiring software engineer passionate about
+    building web, AI, and IoT solutions that solve real-world problems.
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Skill Proficiency</h2>
+
+  HTML / CSS
+  <div class="bar"><span style="width:90%"></span></div>
+
+  JavaScript
+  <div class="bar"><span style="width:75%"></span></div>
+
+  Python
+  <div class="bar"><span style="width:80%"></span></div>
+
+  IoT
+  <div class="bar"><span style="width:70%"></span></div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>AI Chatbot</h3>
+      <p>Intelligent chatbot using Python and NLP.</p>
+    </div>
+
+    <div class="card">
+      <h3>Web Application</h3>
+      <p>Responsive website using HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="card">
+      <h3>Smart Attendance System</h3>
+      <p>IoT-based RFID attendance using ESP8266.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section>
+  <h2>My Journey</h2>
+  <div class="card">2023 – Started programming</div>
+  <div class="card">2024 – Built web & IoT projects</div>
+  <div class="card">2025 – Focused on AI & real-world systems</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section>
+  <h2>What People Say</h2>
+  <div class="card">
+    “Subhashree consistently demonstrates strong learning ability and
+    practical implementation skills.” – Faculty Mentor
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <h2>Let’s Build Something Together</h2>
+  <p>I’m open to collaborations, internships, and exciting projects.</p>
+                    <button class="btn secondary" onclick="location.href='contact1.html'">Contact Me</button>
+  <!-- <a href="#" class="btn">Contact Me</a> -->
+</section>
+
+<footer>
+  Portfolio of Subhashree Priyadarshini | Software Engineer | Web Developer
+</footer>
+
+<script>
+  const btn = document.getElementById("themeToggle");
+  btn.onclick = () => {
+    document.body.classList.toggle("light");
+    btn.textContent =
+      document.body.classList.contains("light") ? "🌞" : "🌙";
+  };
+</script>
+
+</body>
+</html>
