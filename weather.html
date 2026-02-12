@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel ="stylesheet"href="weather.css">
+    <link rel ="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Forecast</h1>
+            <p>Get current weather and daily forecast for any location</p>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name..." value="London">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <div class="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px;">Loading weather data...</p>
+        </div>
+        
+        <div class="weather-info" id="weather-info">
+            <div class="current-weather">
+                <div class="weather-card">
+                    <div class="location" id="location">London, United Kingdom</div>
+                    <div class="date" id="date">Monday, January 1, 2023</div>
+                    
+                    <div class="weather-condition">
+                        <img id="weather-icon" src="" alt="Weather Icon">
+                        <div class="condition-text" id="condition">Partly Cloudy</div>
+                    </div>
+                    
+                    <div class="temperature" id="temperature">15°C</div>
+                </div>
+                
+                <div class="weather-card">
+                    <h3 style="margin-bottom: 20px;">Weather Details</h3>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span>Feels Like</span>
+                            <span id="feels-like">14°C</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Humidity</span>
+                            <span id="humidity">65%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Wind Speed</span>
+                            <span id="wind-speed">12 km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Pressure</span>
+                            <span id="pressure">1015 mb</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Visibility</span>
+                            <span id="visibility">10 km</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>UV Index</span>
+                            <span id="uv-index">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast-container">
+                <h2 class="forecast-title">7-Day Forecast</h2>
+                <div class="forecast-cards" id="forecast-cards">
+                    <!-- Forecast cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="error-message" id="error-message">
+            City not found. Please try again.
+        </div>
+    </div>  
+<script src = "weather.js"></script>>
+</html>
