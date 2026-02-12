@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Skills</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f2027,#202122,#052d3e);
+    overflow:hidden;
+}
+
+/* Floating background animation */
+body::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background: radial-gradient(circle,#00f5ff,transparent);
+    top:-200px;
+    left:-200px;
+    filter:blur(120px);
+    animation: float 8s infinite alternate ease-in-out;
+}
+
+@keyframes float{
+    from{ transform:translate(0,0);}
+    to{ transform:translate(150px,100px);}
+}
+
+#skills{
+    width:90%;
+    max-width:1100px;
+    position:relative;
+    z-index:1;
+}
+
+#skills h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+    color:white;
+    letter-spacing:3px;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.skill{
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(15px);
+    padding:30px;
+    border-radius:25px;
+    transition:0.4s ease;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+/* Hover border glow */
+.skill:hover{
+    transform:translateY(-12px) scale(1.04);
+    box-shadow:0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* Skill icon */
+.skill-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+/* Title */
+.skill-title{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    color:white;
+    font-weight:600;
+}
+
+/* Progress bar */
+.progress-bar{
+    width:100%;
+    height:10px;
+    background:rgba(255,255,255,0.15);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress{
+    height:100%;
+    border-radius:10px;
+    width:0;
+    transition:2s ease;
+}
+
+/* Different colors */
+.skill:nth-child(1) .progress{ background:linear-gradient(90deg,#ff512f,#dd2476); width:85%; }
+.skill:nth-child(2) .progress{ background:linear-gradient(90deg,#00c6ff,#0072ff); width:90%; }
+.skill:nth-child(3) .progress{ background:linear-gradient(90deg,#00f260,#0575e6); width:95%; }
+.skill:nth-child(4) .progress{ background:linear-gradient(90deg,#f7971e,#ffd200); width:80%; }
+.skill:nth-child(5) .progress{ background:linear-gradient(90deg,#8e2de2,#4a00e0); width:75%; }
+
+/* Button appears on hover */
+.skill button{
+    margin-top:18px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    background:white;
+    color:#333;
+    font-weight:600;
+    opacity:0;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.skill:hover button{
+    opacity:1;
+    transform:translateY(-5px);
+}
+/* .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:linear-gradient(45deg,#021a3a,#000);
+}
+
+.nav-links a{
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:18px;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00ffff;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.hero{
+    height:60vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#00ffff;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.8;
+} */
+
+</style>
+</head>
+
+<body>
+<!-- <nav class="navbar">
+    <div class="logo">SPB</div>
+    <div class="nav-links">
+        <a href="home1.html">Home</a>
+        <a href="skills1.html">Skills</a>
+        <a href="project1.html">Projects</a>
+        <a href="contact1.html">Contact</a>
+    </div>
+</nav> -->
+<section id="skills">
+<h2>My Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+    <div class="skill-icon">☕</div>
+    <div class="skill-title">
+        <span>Java</span>
+        <span>85%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+           <button class="btn primary" onclick="location.href='project1.html'">View Projects</button>
+
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🐍</div>
+    <div class="skill-title">
+        <span>Python</span>
+        <span>90%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+           <button class="btn primary" onclick="location.href='project1.html'">View Projects</button>
+
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🌐</div>
+    <div class="skill-title">
+        <span>HTML/CSS</span>
+        <span>95%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+           <button class="btn primary" onclick="location.href='rckpprscsr.html'">View Projects</button>
+
+</div>
+
+<div class="skill">
+    <div class="skill-icon">⚡</div>
+    <div class="skill-title">
+        <span>JavaScript</span>
+        <span>80%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+        <button class="btn primary" onclick="location.href='weather.html'">View Projects</button>
+            <!-- <button class="btn primary">View projects</button> -->
+    <!-- <button>View Projects</button> -->
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🤖</div>
+    <div class="skill-title">
+        <span>AI / ML</span>
+        <span>75%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+           <button class="btn primary" onclick="location.href='project1.html'">View Projects</button>
+
+</div>
+
+</div>
+</section>
+
+</body>
+</html>
